@@ -1,0 +1,25 @@
+img {
+  width: 200px;
+  padding: 40px;
+}
+
+#title {
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font: {
+      weight: 600;
+      size: xx-large;
+      family: Georgia;
+    }
+  }
+}
+
+#logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: bold;
+}
