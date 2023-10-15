@@ -1,0 +1,78 @@
+body {
+  font: {
+    family: "Comic Sans MS";
+    weight: 500;
+  }
+  padding: 20px;
+}
+
+[class*="box"] {
+  width: 90px;
+  height: 55px;
+  padding: 15px;
+  border: {
+    width: 1px;
+    color: gray;
+    style: solid;
+  }
+}
+
+[class*="text"] {
+  margin: 20px 0px;
+}
+
+@mixin theme-selector($theme-name) {
+  .theme1 {
+    .box-base {
+      background-color: red;
+    }
+    .box-important {
+      background-color: maroon;
+    }
+    .box-warning {
+      background-color: lightPink;
+    }
+    .box-shadow {
+      box-shadow: -10px 10px 5px gray;
+    }
+    .principal-text {
+      font: {
+        family: arial;
+      }
+    }
+    .secondary-text {
+      font: {
+        family: Courier New;
+      }
+    }
+  }
+  .theme2 {
+    .box-base {
+      background-color: blue;
+    }
+    .box-important {
+      background-color: navy;
+    }
+    .box-warning {
+      background-color: cyan;
+    }
+    .box-shadow {
+      box-shadow: 10px 10px 5px gray;
+    }
+    .principal-text {
+      font: {
+        family: Monaco;
+      }
+    }
+    .secondary-text {
+      font: {
+        family: Monaco;
+      }
+    }
+    [class*="box"] {
+      border-radius: 4px;
+    }
+  }
+}
+
+@include theme-selector(theme);

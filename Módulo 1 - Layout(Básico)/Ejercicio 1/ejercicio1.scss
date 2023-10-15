@@ -1,0 +1,52 @@
+$square-size: 70px;
+$rectangle-size: 90px;
+$color: royalBlue;
+
+@function darken-color($color, $level) {
+  @return darken($color, $level * 5%);
+}
+
+@function lighten-color($color, $level) {
+  @return lighten($color, $level * 5%);
+}
+
+.container-1 {
+  display: flex;
+}
+
+[class="box base-color"] {
+  height: $square-size;
+  width: $rectangle-size;
+  background-color: $color;
+  margin: 4px;
+  border-radius: 4px;
+  text-align: center;
+  font: {
+    size: 10px;
+  }
+  color: white;
+  @for $i from 1 through 4 {
+    &[class*="darken-#{$i}"] {
+      background-color: darken-color($color, $i);
+    }
+    &[class*="lighten-#{$i}"] {
+      background-color: lighten-color($color, $i);
+    }
+  }
+  & > span {
+    position: relative;
+    top: 40%;
+  }
+}
+
+[class*="box lighten"] {
+  @extend [class="box base-color"];
+  width: $square-size;
+  color: gray;
+}
+
+[class*="box darken"] {
+  @extend [class="box base-color"];
+  width: $square-size;
+  color: gray;
+}
