@@ -1,0 +1,11 @@
+<div class="container">
+  <div>
+    <img src="assets/img/ultramarines.png" alt="logo" class="logo" />
+    <h1>Ultramarines recruitment</h1>
+  </div>
+
+  <div class="right">
+    <p *ngIf="username">{{ username }}</p>
+    <button *ngIf="isLoggedIn" (click)="logout()">Log out</button>
+  </div>
+</div>

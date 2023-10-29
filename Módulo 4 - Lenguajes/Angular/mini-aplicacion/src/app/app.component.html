@@ -1,0 +1,13 @@
+<div class="page-container">
+  <div class="content-wrap">
+    <app-header
+      (saveEvent)="save($event)"
+      [isLoggedIn]="isLoggedIn"
+      [username]="username"
+    ></app-header>
+    <app-menu [isLoggedIn]="isLoggedIn"></app-menu>
+    <app-login *ngIf="isLoginInUrl()" (saveEvent)="save($event)"></app-login>
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer class="footer"></app-footer>
+</div>

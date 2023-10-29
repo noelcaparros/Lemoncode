@@ -1,0 +1,19 @@
+a {
+  color: rgb(51, 122, 183);
+  margin-right: 1rem;
+  text-decoration: none;
+  &:hover {
+    color: rgb(26, 87, 136);
+    text-decoration: underline;
+  }
+  &.selected {
+    color: rgb(112, 185, 245);
+  }
+}
+
+div {
+  padding-left: 5%;
+  background-color: lightcyan;
+  height: 3rem;
+  line-height: 3rem;
+}

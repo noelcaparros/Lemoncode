@@ -1,0 +1,23 @@
+.form-container {
+  padding-left: 5%;
+}
+
+.field-container {
+  margin-bottom: 1rem;
+  label {
+    margin-right: 1rem;
+  }
+}
+
+input.ng-invalid.ng-touched {
+  border: 2px solid red;
+}
+
+input.ng-valid.ng-touched {
+  border: 2px solid green;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+}

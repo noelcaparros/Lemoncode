@@ -1,0 +1,45 @@
+<div class="form-container">
+  <h3>Log in</h3>
+  <form>
+    <div class="field-container">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        [(ngModel)]="username"
+        name="username"
+        placeholder="Username"
+        required
+        #usernameInput="ngModel"
+      />
+      <p
+        *ngIf="usernameInput.invalid && usernameInput.touched"
+        class="error-message"
+      >
+        This field can't be empty.
+      </p>
+    </div>
+    <div class="field-container">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Password"
+        required
+        #passwordInput="ngModel"
+      />
+      <p
+        *ngIf="passwordInput.invalid && passwordInput.touched"
+        class="error-message"
+      >
+        This field can't be empty.
+      </p>
+    </div>
+    <button [disabled]="check()" (click)="login()" type="submit" #buttonSubmit>
+      Log in
+    </button>
+    <p *ngIf="loginIncorrect" class="error-message">
+      Wrong username or password
+    </p>
+  </form>
+</div>

@@ -1,0 +1,11 @@
+<div *ngIf="!isLoggedIn">
+  <a routerLink="/home" routerLinkActive="selected">Home</a>
+  <a routerLink="/login" routerLinkActive="selected">Login</a>
+  <a routerLink="/about" routerLinkActive="selected">Acerca de</a>
+</div>
+<div *ngIf="isLoggedIn">
+  <a routerLink="/dashboard" routerLinkActive="selected">Dashboard</a>
+  <a routerLink="/gallery" routerLinkActive="selected">Galería</a>
+  <a routerLink="/crud" routerLinkActive="selected">CRUD</a>
+  <a routerLink="/profile" routerLinkActive="selected">Profile</a>
+</div>
