@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Character } from './character.api-model';
 
 // axios
 // export const getCharacter = async (id: string) => {
@@ -17,7 +18,7 @@ import axios from 'axios';
 //   }
 
 //fetch
-export const getCharacter = async (id: string) => {
+export const getCharacter = async (id: string): Promise<Character> => {
   try {
     const response = await fetch(
       `https://rickandmortyapi.com/api/character/${id}`

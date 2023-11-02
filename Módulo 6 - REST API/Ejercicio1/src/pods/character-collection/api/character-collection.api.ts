@@ -22,7 +22,9 @@ let characterCollection = [...mockCharacterCollection];
 // };
 
 //axios
-export const getCharacterCollection = async () => {
+export const getCharacterCollection = async (): Promise<
+  CharacterEntityApi[]
+> => {
   try {
     const response = await axios.get(
       'https://rickandmortyapi.com/api/character'
